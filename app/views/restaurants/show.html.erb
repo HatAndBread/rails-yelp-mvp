@@ -1,0 +1,9 @@
+<h1><%= @restaurant.name %></h1>
+<%= link_to  "Add a review", new_restaurant_review_path(@restaurant) %>
+<div class="container-sm">
+  <% @restaurant.reviews.each do |review| %>
+    <div class="card">
+      <p><%= review.content %></p>
+    </div>
+  <% end %>
+</div>

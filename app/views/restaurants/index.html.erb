@@ -1,0 +1,11 @@
+<h1>These are some restaurants 🌈</h1>
+<div class="container-sm">
+  <% @restaurants.each do |restaurant| %>
+    <div class="card">
+      <%= link_to  restaurant.name, restaurant_path(restaurant), class: "name-link" %>
+      <%= restaurant.category %>
+      <%= restaurant.address %>
+      <%= restaurant.phone_number %>
+    </div>
+  <% end %>
+</div>
